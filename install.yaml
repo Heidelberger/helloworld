@@ -1,0 +1,23 @@
+# Installation script for helloworld app
+# This script runs in the folder containing the unzipped installation package.
+# There is no guarantee where the executing folder is and it may change in the future.
+Bash:
+  0:
+    # Create service account to run this application
+    # command:  su -c "useradd helloworld-agent -s /bin/bash -m -g $PRIMARYGRP -G $MYGROUP"
+    command: uptime
+  1:
+    # Set password for service account
+    command: uptime
+  2:
+    # Delete any previous installation
+    command: rm -rf /home/quentin/software/helloworld
+  3:    
+    # Create destination folder if not already present    
+    command: mkdir -p -- "$\home\quentin\software\helloworld"
+  4:
+    # Copy files to destination folder
+    command: cp * home/quentin/software/helloworld
+  5:
+    # Report success (remove backups)
+    command: uptime
